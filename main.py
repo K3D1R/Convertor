@@ -33,7 +33,7 @@ while turn:
         wsh = wb[sheet_name]
         wsh21 = wb.create_sheet(sheet_name + ' v2.1')
         inversion = bool(int(input('Поменять местами смены с табельными номерами? 0/1 ')))
-        not_standart_template = bool(int(input('МЧ обычный или грамоты? 0/1 ')))
+        not_standart_template = bool(int(input('МЧ обычный или грамоты? 0/1 '))) #гыг
 
         #Создаём шапку
         title = str(wsh['A1'].value) #Здесь должно быть решение для случаев, когда число задано в названии, но его здесь нет

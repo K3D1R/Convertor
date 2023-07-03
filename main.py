@@ -147,7 +147,7 @@ while turn:
 
         if not inversion:
             #Копирование смены
-            for row in range(3, end_num):
+            for row in range(3, end_num): #lol
                 cell = f'C{row}'
                 wsh21[cell] = wsh[cell].value
 

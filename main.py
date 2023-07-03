@@ -17,8 +17,12 @@ while turn:
     listOfFiles = os.listdir('.')
     pattern = "*.xlsx"
     for entry in listOfFiles:
-        if fnmatch.fnmatch(entry, pattern):
-                print(entry)
+        file = fnmatch.fnmatch(entry, pattern)
+        if file:
+            if entry[:2] == '~$':
+                print(f"Если вы собираетесь работать с {entry.replace('~$', '')}, то необходимо закрыть его")
+            print(entry)
+
 
     name = input('Введите имя файла: имяфайла.xlsx ')
     if name == 'вспв':
@@ -266,7 +270,6 @@ while turn:
             num+=1
 
 
-        end_num-=1
         #print('Пожалуйста, добавьте вручную таблицу с км по сменам после того, как программа завершит работу')
         wsh21['L1'] = 'Согласовано с куратором мероприятия'
         wsh21['L2'] = 'Итог по сменам'
